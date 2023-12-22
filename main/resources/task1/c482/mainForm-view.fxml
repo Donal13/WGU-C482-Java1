@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task1.c482.MainFormController">
+  <children>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ffffff00" height="291.0" layoutX="458.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="437.0" />
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ffffff00" height="291.0" layoutX="11.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="437.0" />
+    <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="900.0" spacing="10.0">
+      <children>
+        <Label alignment="CENTER" text="Inventory Management System">
+          <font>
+            <Font name="System Bold" size="14.0" />
+          </font>
+        </Label>
+        <HBox prefHeight="359.0" prefWidth="900.0" spacing="20.0">
+          <children>
+            <VBox prefHeight="339.0" prefWidth="900.0">
+              <children>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="435.0" spacing="10.0">
+                  <children>
+                    <Label text="Parts">
+                      <font>
+                        <Font name="System Bold" size="14.0" />
+                      </font>
+                      <padding>
+                        <Insets right="100.0" />
+                      </padding>
+                    </Label>
+                    <TextField fx:id="MainPartSearchTxt" minWidth="180.0" onAction="#OnActionPartSearch" promptText="Search by Part ID or Name" />
+                  </children>
+                </HBox>
+                <TableView fx:id="mainPartsTable" maxWidth="-Infinity" prefHeight="200.0" prefWidth="420.0">
+                  <columns>
+                    <TableColumn fx:id="partIdMainTblCol" prefWidth="75.0" text="Part ID" />
+                    <TableColumn fx:id="partNameMainTblCol" prefWidth="100.0" text="Part Name" />
+                    <TableColumn fx:id="partInvMainTblCol" prefWidth="100.0" text="Inventory Level" />
+                    <TableColumn fx:id="partPriceMainTblCol" prefWidth="125.0" text="Price / Cost per Unit" />
+                  </columns>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="271.0" spacing="10.0">
+                  <children>
+                    <Button fx:id="AddPartsMainBtn" maxWidth="54.0" minWidth="54.0" mnemonicParsing="false" onAction="#OnActionAddPartBtn" text="Add" />
+                    <Button fx:id="ModifyPartsMainBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnActionModifyPartBtn" text="Modify" />
+                    <Button fx:id="DeletePartsMainBtn" layoutX="62.0" layoutY="10.0" maxWidth="54.0" minWidth="54.0" mnemonicParsing="false" onAction="#OnActionDeletePartBtn" text="Delete" />
+                  </children>
+                  <padding>
+                    <Insets right="10.0" />
+                  </padding>
+                </HBox>
+              </children>
+            </VBox>
+            <VBox layoutX="20.0" layoutY="10.0" prefHeight="339.0" prefWidth="900.0">
+              <children>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="435.0" spacing="10.0">
+                  <children>
+                    <Label text="Products">
+                      <font>
+                        <Font name="System Bold" size="14.0" />
+                      </font>
+                      <padding>
+                        <Insets right="90.0" />
+                      </padding>
+                    </Label>
+                    <TextField fx:id="MainProductSearchTxt" minWidth="180.0" onAction="#OnActionProdSearch" promptText="Search by Product ID or Name" />
+                  </children>
+                </HBox>
+                <TableView fx:id="mainProductsTable" maxWidth="-Infinity" prefHeight="200.0" prefWidth="420.0">
+                  <columns>
+                    <TableColumn fx:id="productIdMainTblCol" prefWidth="75.0" text="Product ID" />
+                    <TableColumn fx:id="productNameMainTblCol" prefWidth="100.0" text="Product Name" />
+                    <TableColumn fx:id="productInvMainTblCol" prefWidth="100.0" text="Inventory Level" />
+                    <TableColumn fx:id="productPriceMainTblCol" prefWidth="125.0" text="Price / Cost per Unit" />
+                  </columns>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="271.0" spacing="10.0">
+                  <children>
+                    <Button fx:id="AddProductsMainBtn" maxWidth="54.0" minWidth="54.0" mnemonicParsing="false" onAction="#OnActionAddProdBtn" text="Add" />
+                    <Button fx:id="ModifyProductsMainBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnActionModProdBtn" text="Modify" />
+                    <Button fx:id="DeleteProductsMainBtn" layoutX="62.0" layoutY="10.0" maxWidth="54.0" minWidth="54.0" mnemonicParsing="false" onAction="#OnActionDelProdBtn" text="Delete" />
+                  </children>
+                  <padding>
+                    <Insets right="10.0" />
+                  </padding>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+          <padding>
+            <Insets left="10.0" right="10.0" />
+          </padding>
+        </HBox>
+      </children>
+      <padding>
+        <Insets left="10.0" top="10.0" />
+      </padding>
+    </VBox>
+    <HBox alignment="BOTTOM_RIGHT" layoutY="339.0" prefHeight="61.0" prefWidth="900.0">
+      <children>
+        <Button fx:id="ExitMainBtn" minWidth="60.0" mnemonicParsing="false" onAction="#OnExitMainBtn" text="Exit" />
+      </children>
+      <padding>
+        <Insets bottom="20.0" right="40.0" />
+      </padding>
+    </HBox>
+  </children>
+</AnchorPane>
